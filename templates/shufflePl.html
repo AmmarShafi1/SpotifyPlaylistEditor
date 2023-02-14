@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title%}Playlist Page{% endblock %}
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shuffle Playlist Page</title>
+    <!-- Font Awesome Icons -->
+    <!-- Stylesheet -->
+</head>
+{% block content %}
+
+<body>
+    <div class="flex-container">
+        <div class="subButtons">
+            <form action='/shufflePl' , method='POST'>
+                <input type="submit" name='check' id="new" value="Create New Playlist">
+
+        </div>
+        <div class=" subButtons">
+            <form action='/shufflePl' , method='POST'>
+                <input type="submit" name='check' id="old" value="Shuffle Original Playlist">
+
+        </div>
+    </div>
+    <div class="wrapper">
+        {% for item in images %}
+        <div class="container">
+            <input type="radio" id="{{item[1]}}" name="pl" value="{{item[1]}}" />
+            <label for="{{item[1]}}">
+                <img src="{{item[0]}}" alt="{{item[1]}}">
+            </label>
+            <div class="desc">{{item[1]}}</div>
+        </div>
+        {%endfor%}
+        </form>
+    </div>
+</body>
+{% endblock %}
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title%}Playlist Page{% endblock %}
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combine Playlist Page</title>
+
+</head>
+{% block content %}
+
+<body>
+    <div class="flex-container">
+        <div class="subButtons">
+            <form action='/combinePl' , method='POST'>
+                <input type="text" name="newPlName" id="newPlName" placeholder="Enter New PL Name">
+                <input type="submit" name='check' id="new" value="Combine Playlists">
+        </div>
+    </div>
+    <div class="wrapper">
+        {% for item in images %}
+        <div class="container">
+            <input type="checkbox" id="{{item[1]}}" name="plcom" value="{{images.index(item)}}" />
+            <label for="{{item[1]}}">
+                <img src="{{item[0]}}" alt="{{item[1]}}">
+            </label>
+            <div class="desc">{{item[1]}}</div>
+        </div>
+        {%endfor%}
+        </form>
+    </div>
+</body>
+{% endblock %}
+
+</html>

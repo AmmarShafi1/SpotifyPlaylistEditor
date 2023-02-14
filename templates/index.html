@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<style>
+    .jumbotron {
+        background-image: url('https://wallpapercave.com/wp/wp10504713.jpg');
+        height: 100vh
+    }
+
+    .text-white {
+        text-align: center;
+    }
+</style>
+<div class="jumbotron jumbotron-fluid">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3">Welcome to Spotify Playlist Editor</h1>
+                <a class="btn btn-outline-light btn-lg" href="{{url_for('shufflePl')}}" role="button">Shuffle
+                    Playlist</a>
+                <a class="btn btn-outline-light btn-lg" href="{{url_for('combinePl')}}" role="button">Combine
+                    Playlist</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

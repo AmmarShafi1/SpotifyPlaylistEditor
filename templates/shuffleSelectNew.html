@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title%}Playlist Page{% endblock %}
+
+<html lang="en">
+<style>
+    h1 {
+        text-align: center !important;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shuffle</title>
+
+</head>
+
+{% block content %}
+<h1>Shuffle: Select a Playlist to Shuffle</h1>
+<form action="/shuffleSelect" method="POST">
+    <div class="checkbox">
+        <input type="submit" name='check' id="old" value="Shuffle Original Playlist">
+    </div>
+</form>
+{% for item in images %}
+<div class="responsive">
+    <div class="gallery">
+        <a href="{{url_for('shuffling', pName = item[1], newPL = True)}}">
+            <img src="{{item[0]}}" alt="{{item[1]}}" scale=75%>
+        </a>
+        <div class="desc">{{item[1]}}</div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+</html>

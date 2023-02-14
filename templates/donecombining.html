@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title%}Done Combining{% endblock %}
+
+{% block content %}
+<style>
+  h1 {
+    position: relative !important;
+    text-align: center;
+  }
+
+  p {
+    position: relative !important;
+    text-align: center;
+  }
+
+  .playlistPicture img {
+    border: 2px solid #000000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .playlistPicture.resize {
+    height: 60%;
+    width: 60%;
+  }
+
+  .playlistPicture a {
+    scale: 60%;
+  }
+
+  .playlistPicture img:hover {
+    border: 2px solid #ffffff;
+  }
+</style>
+<h1>Playlists are Combined!!!</h1>
+<p>The new playlist is ready to use</p>
+<h1>{{pName}}</h1>
+<div class=playlistPicture>
+  <a href="{{pLink}}" target="_blank">
+    <img src="{{pImage}}" alt="{{pName}}" height="30%" width="30%">
+  </a>
+</div>
+{% endblock %}
