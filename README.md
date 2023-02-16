@@ -4,7 +4,7 @@ Flask based website utilizing the python Spotify library "Spotipy". This website
 # Home Page
 Here is the login page, utilizing a bootstrap jumbotron. Each page will also have a bootstrap NavBar, with  four options. Clicking the Spotify logo will redirect the user to Spotify.com. Clicking "Home" will bring the user back to this page. Clicking "Shuffle" will redirect the user to the "Shuffle" page, and "Combine" will redirect the user to the "Combine" page. This is also the case for clicking "Shuffle Playlist" and "Combine Playlist" respectively. On first visit, clicking any button other than home will open a new tab at Spotify, asking for authentication for the app.
 
-![image](https://cdn.discordapp.com/attachments/404431223860232203/1075636366861410304/Screen_Shot_2023-02-15_at_3.49.21_PM.png)
+![image](https://media.discordapp.net/attachments/404431223860232203/1075636366861410304/Screen_Shot_2023-02-15_at_3.49.21_PM.png?width=1775&height=903)
 
 # Shuffle Page
 This is the shuffle page. This page utilizes the Spotify to pull the user's playlist information, displaying the playlist names and images on a responsive grid. For this page, the playlists function as a radio input, meaning only one playlist can be selected at a time. Once a  playlist is selected, the user can either shuffle the original playlist, or create a new one. The new playlist will be named "Original playlist name" + "Shuffle". The method of shuffling uses Python's Random Shuffle() method to shuffle the list of tracks from the playlist.
